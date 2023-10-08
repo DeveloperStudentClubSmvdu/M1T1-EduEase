@@ -11,7 +11,7 @@ The website is made while maintaining the ease of accessing the information.
 - [Contributors](#contributors)
 
 ## Introduction
-College students have to spend a lot of time searching for Notes or PYQ and some may know or collected it already but not be able to share it in an organised way and maybe PYQ can’t get passed to juniors. In recent cases, we also saw that ongoing projects in a particular college or what are the archives of these projects. We have made a solution for it.
+College students have to spend a lot of time searching for Notes or PYQ and some may know or collected it already but not be able to share it in an organised way and maybe PYQ can’t get passed to juniors. In recent cases, we also saw ongoing projects in a particular college or what are the archives of these projects. We have made a solution for it.
 It is a web app that is associated with college and university students and it has the solution to all problems mentioned above.
 
 ## Features
@@ -49,6 +49,9 @@ Visit the website and the user can access directly the content uploaded there.
 
 Mentor: Shaswat Sharma: 20bcs75 
 
+Please open an issue or create a pull request to discuss and contribute.
+___
+---
 
 
 
