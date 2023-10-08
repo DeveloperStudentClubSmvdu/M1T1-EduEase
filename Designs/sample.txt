@@ -1,0 +1,1 @@
+Here in this folder, you can find our website design, API and database schemas.
