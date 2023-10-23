@@ -1,0 +1,26 @@
+{
+  "name": "eduease",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "rollup --config --watch",
+    "build": "rollup --config"
+  },
+  "author": "mmaismma",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^10.5.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "eslint": "^8.52.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-svelte": "^2.34.0",
+    "rollup": "^4.1.4",
+    "rollup-plugin-svelte": "^7.1.6",
+    "svelte": "^4.2.2"
+  }
+}
