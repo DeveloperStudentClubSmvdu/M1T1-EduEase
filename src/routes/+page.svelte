@@ -1,3 +1,8 @@
+<svelte:head>
+	<title>SMVDU Student Hub</title>
+	<meta name="description" content="SMVDU Student Hub" />
+</svelte:head>
+
 <div class="content">
   <header />
 
@@ -27,7 +32,7 @@
             }
         ]}
         />
-    {:else}
+    {:else if fb.user === null}
         <VerticalChoiceList
         choiceList={[
             {
@@ -52,30 +57,15 @@
   </main>
 </div>
 
-<style>
-    .content {
-        width: 85%;
-        min-height: 100%;
-        margin: auto;
-        padding: 2em 0 2em 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    header {
-        height: 48px;
-        /* background-color: red; */
-    }
-</style>
-
 <script>
-    import MoodEmoticon from "./lib/MoodEmoticon.svelte";
-    import VerticalChoiceList from "./lib/VerticalChoiceList.svelte";
+    import './style.css';
+    import MoodEmoticon from "$lib/components/MoodEmoticon.svelte";
+    import VerticalChoiceList from "$lib/components/VerticalChoiceList.svelte";
 
-    import { firebaseConfig } from "./lib/firebase.js";
+    // Firebase initialization
+    import { firebaseConfig } from "$lib/scripts/firebase.js";
     import { initializeApp } from 'firebase/app'
-    import { getIdTokenResult, getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
+    import { getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
     const fb = {
         config: firebaseConfig,
     }
@@ -84,7 +74,6 @@
 
     onAuthStateChanged(fb.auth, user => {
         fb.user = user;
-        console.log(fb.user);
     })
 
     fb.signin = async () => {
@@ -97,9 +86,8 @@
             const result = await signInWithPopup(fb.auth, provider);
             fb.user = result.user;
             if (fb.user) {
-                window.location.assign("/app")
+                window.location.assign("/aboutme")
             }
-            console.log(user);
         }
         catch (err) {
             console.log(err)

@@ -1,3 +1,10 @@
+# SvelteKit
+/.svelte-kit
+
+# vite temporary config
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
 # Logs
 logs
 *.log
@@ -42,8 +49,9 @@ bower_components
 .lock-wscript
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
-build
-dist/**/bundle.js
+dist/
+/package
+.output
 
 # Dependency directories
 node_modules/
