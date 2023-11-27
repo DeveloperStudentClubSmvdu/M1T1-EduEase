@@ -11,7 +11,7 @@ This Proof of Concept (POC) project aims to build a website/platform where colle
 ## Technology stack
 
 - Svelte
-- Rollup
+- Vite
 - Firebase
 
 ## Contributing
