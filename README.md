@@ -37,5 +37,4 @@ This Proof of Concept (POC) project aims to build a website/platform where colle
 - Mayank Arya (22bcs053)
 - Kaushal Kumar Gupta (22bcs041)
 - Bigan Kumar (22bcs031)
-- Naman Khajuria (23bcs035)
 - Shaswat Sharma (20bcs75) (Mentor)
