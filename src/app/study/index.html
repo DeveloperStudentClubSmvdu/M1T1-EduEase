@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, interactive-widget=overlays-content" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD@100..700,0..1,-50..200&family=Inter:wght,GRAD@100..700,-50..200&display=block"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="/assets/global.css">
+
+  <title>Yellow Notes</title>
+</head>
+
+<body>
+  <main id="app" style="display: contents;"></div>
+  <div id="navbar" style="display: contents;"></div>
+
+  <script type="module">
+    import Study from './Study.svelte';
+    import NavigationBar from '/lib/NavigationBar.svelte';
+
+    const page = new Study({
+      target: document.getElementById('app'),
+    });
+
+    const navbar = new NavigationBar({
+      target: document.getElementById('navbar'),
+      props: {
+        destinations: [
+          {
+            icon: "star",
+            label: "For you",
+            id: "foryou",
+          },
+          {
+            icon: "school",
+            label: "Class",
+            id: "class",
+          },
+          {
+            icon: "groups",
+            label: "Clubs",
+            id: "clubs",
+          },
+          {
+            icon: "note_stack",
+            label: "Study",
+            id: "study",
+            selected: true,
+          },
+        ],
+        // screen: document.getElementById('app')
+      }
+    });
+
+    export default [page, navbar];
+  </script>
+</body>
+
+</html>

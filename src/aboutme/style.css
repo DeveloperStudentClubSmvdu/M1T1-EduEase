@@ -1,5 +1,6 @@
 body {
-    background: linear-gradient(165deg, var(--color-accent-darker), var(--color-bg) 60%);
+    background: linear-gradient(165deg, var(--color-primary-container), var(--color-surface) 60%);
+    height: 100%;
 }
 
 .content {

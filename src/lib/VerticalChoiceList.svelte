@@ -5,17 +5,24 @@
   onMount(() => {
     idealChoice = document.querySelector(
       `[name=${choiceList.filter((x) => x.highlight).at(-1).name}]`
-    )
-  })
+    );
+  });
 
   let focused, hovered;
   $: finalChoice = hovered ?? focused ?? idealChoice;
   let indicator;
-  
 </script>
 
-<div aria-hidden="true" tabindex="-1" class="indicator" bind:this={indicator}
-  style:top={`${finalChoice?.offsetTop + finalChoice?.offsetHeight / 2 - indicator?.offsetHeight / 2}px`}
+<div
+  aria-hidden="true"
+  tabindex="-1"
+  class="indicator"
+  bind:this={indicator}
+  style:top={`${
+    finalChoice?.offsetTop +
+    finalChoice?.offsetHeight / 2 -
+    indicator?.offsetHeight / 2
+  }px`}
   style:width={`${finalChoice?.offsetWidth}px`}
   style:left={`${finalChoice?.offsetLeft}px`}
 />
@@ -26,17 +33,13 @@
       role="button"
       href={choice.href ?? "#"}
       on:click={choice.action ?? null}
-
       on:mouseenter={(e) => (hovered = e.currentTarget)}
       on:focus={(e) => (focused = e.currentTarget)}
-
       on:mouseleave={() => (hovered = null)}
       on:blur={() => (focused = null)}
-
       name={choice.name}
-      highlight={finalChoice?.getAttribute('name') === choice.name}
-
-    ><span>{@html choice.text}</span></a
+      highlight={finalChoice?.getAttribute("name") === choice.name}
+      ><span>{@html choice.text}</span></a
     >
   {/each}
 </div>
@@ -72,18 +75,18 @@
     padding-top: 0.2em;
     padding-bottom: 0.2em;
   }
-    
+
   a:focus-visible {
     outline: 2px solid var(--color-accent);
   }
 
   a:after {
-    content: 'arrow_forward';
-    font-family: 'Material Symbols Outlined';
+    content: "arrow_forward";
+    font-family: "Material Symbols Outlined";
     font-size: 24px;
     display: inline-block;
-    font-feature-settings: 'liga';
-    -moz-font-feature-settings: 'liga';
+    font-feature-settings: "liga";
+    -moz-font-feature-settings: "liga";
     -moz-osx-font-smoothing: grayscale;
     margin-left: 8px;
     overflow: hidden;
@@ -93,14 +96,15 @@
     opacity: 0;
   }
 
-  @media(pointer: coarse) {
+  @media (pointer: coarse) {
     a[highlight="true"]::after {
       width: 32px;
       opacity: 1;
     }
   }
 
-  a[highlight="true"]:hover::after, a:focus-visible::after {
+  a[highlight="true"]:hover::after,
+  a:focus-visible::after {
     width: 32px;
     opacity: 1;
   }

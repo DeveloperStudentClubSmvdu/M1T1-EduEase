@@ -1,25 +1,29 @@
 {
-	"name": "eduease-sveltekit",
-	"version": "0.0.1",
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview",
-		"lint": "eslint ."
-	},
-	"devDependencies": {
-		"@fontsource/fira-mono": "^4.5.10",
-		"@neoconfetti/svelte": "^1.0.0",
-		"@sveltejs/adapter-auto": "^2.0.0",
-		"@sveltejs/kit": "^1.20.4",
-		"eslint": "^8.28.0",
-		"eslint-plugin-svelte": "^2.30.0",
-		"svelte": "^4.0.5",
-		"svelte-adapter-firebase": "^0.15.0",
-		"vite": "^4.4.2"
-	},
-	"type": "module",
-	"dependencies": {
-		"firebase": "^10.5.0"
-	}
+  "name": "yellow-notes",
+  "version": "0.0.1",
+  "description": "Nothing makes life easier than a student hub in college.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite serve src/",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "yellowpages",
+    "eduease",
+    "studenthub"
+  ],
+  "author": "mmaismma",
+  "license": "ISC",
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.4.2",
+    "eslint": "^8.52.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "svelte": "^4.0.5"
+  },
+  "dependencies": {
+    "firebase": "^10.6.0",
+    "vite": "^4.4.5"
+  }
 }

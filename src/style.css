@@ -1,0 +1,42 @@
+body {
+    background: linear-gradient(165deg, var(--color-primary-container), var(--color-surface) 60%);
+    height: 100%;
+}
+
+.content {
+    width: 85%;
+    min-height: 100%;
+    margin: auto;
+    padding: 2em 0 2em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    height: 48px;
+    /* background-color: red; */
+}
+
+h1 {
+    font-size: 2.185em;
+    margin: 0 0 0.75em 0;
+}
+
+p {
+    margin: 0 0 1.64em 0;
+}
+
+ul {
+    margin: 1.625em 0;
+}
+
+.light {
+    font-weight: lighter;
+}
+
+u {
+    text-decoration: wavy underline currentColor 1px;
+    text-decoration-skip-ink: all;
+    text-underline-offset: 3px;
+}
